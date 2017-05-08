@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: d7c018f575e937748b5cf8c9cd0969d0
+timeCreated: 1494285904
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Oswald
+  fontNames:
+  - Oswald
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a55181b02efb3cb47bd361817779e49a, type: 3}
+  - {fileID: 12800000, guid: 124eb5768bcd3d041b6d095629b3a341, type: 3}
+  - {fileID: 12800000, guid: 75a0ef6a3edfecb4e84394fc4efc8888, type: 3}
+  - {fileID: 12800000, guid: 288c63faa88e49e4da1d8d2359afc92e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

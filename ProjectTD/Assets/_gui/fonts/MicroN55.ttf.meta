@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4706dc65744f91b4fa57ff7e41a8905c
+timeCreated: 1494285918
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: microN55
+  fontNames:
+  - microN55
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
