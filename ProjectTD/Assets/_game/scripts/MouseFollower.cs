@@ -8,6 +8,7 @@ public class MouseFollower : MonoBehaviour {
     [Header("Settings")]
     [Range(1, 10)]
     public float moveSpeed = 2;
+    public bool RequiresClick = true;
 
     Rigidbody2D rb;
     Vector2 pos;
@@ -17,6 +18,7 @@ public class MouseFollower : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
+        mousePos = transform.position;
     }
 
     void Update()
@@ -24,10 +26,21 @@ public class MouseFollower : MonoBehaviour {
         // Parent's position
         pos = transform.position;
         // Target's position in world space
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (RequiresClick)
+        {
+            if(Input.GetMouseButton(0)) mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        } else
+        {
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+            
         // Direction to target as a unit vector (scaled down to 1 so it can be multiplied)
         direction = (mousePos - pos).normalized;
-        // Direction * speed * (per fraction of a second)
-        rb.transform.Translate(direction * moveSpeed * Time.deltaTime);
+
+        if ((mousePos - pos).SqrMagnitude() > (moveSpeed * moveSpeed * Time.deltaTime))
+        {
+            // Direction * speed * (per fraction of a second)
+            rb.transform.Translate(direction * moveSpeed * Time.deltaTime);
+        }
     }
 }
