@@ -24,10 +24,13 @@ public class Missile : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.DrawLine(transform.position, Target.position, Color.yellow);
+
         newRot = Quaternion.LookRotation(transform.position - Target.position, Vector3.forward);
         newRot.x = newRot.y = 0f;
         transform.rotation = Quaternion.Slerp(transform.rotation, newRot, Time.deltaTime * rotSpeed);
         rb.velocity = transform.up * flightSpeed;
+
         if(rotSpeed < 40f)
         {
             lastRot += Time.deltaTime * Time.deltaTime * 50f;

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class StandardTower : TowerBase
 {
+    /*
     public List<PayloadBase> PayloadList = new List<PayloadBase>();
     float shotTime = 0;
 
@@ -25,4 +26,5 @@ public class StandardTower : TowerBase
             PayloadList[0].Fire(Target);
         }
     }
+    */
 }

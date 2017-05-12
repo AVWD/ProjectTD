@@ -6,6 +6,15 @@ using System;
 
 public class StandardPayload : PayloadBase
 {
+    public Transform Target;
+    private void Awake()
+    {
+        Vector2 vel = Target.position - transform.position;
+        vel = vel.normalized * 3f;
+        Fire(transform.position, vel, 10, null);
+    }
+
+    /*
     public Transform parentTransform;
     public Pool<GameObject> projectilePool;
     protected int poolSize = 32;
@@ -43,4 +52,5 @@ public class StandardPayload : PayloadBase
         bullet.SetActive(false);
         projectilePool.Release(bullet);
     }
+    */
 }
