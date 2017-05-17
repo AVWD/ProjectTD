@@ -105,7 +105,11 @@ public class LevelDataEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        // Render all standard items.
+        // Uses [HideInInspector] to prevent wave data from rendering
         base.OnInspectorGUI();
+
+        // Now render custom wave data editor
         serializedObject.Update();
         list.DoLayoutList();
         serializedObject.ApplyModifiedProperties();

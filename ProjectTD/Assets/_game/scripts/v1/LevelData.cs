@@ -4,6 +4,7 @@ using UnityEngine;
 
 // Serlialize level data in json
 public class LevelData : MonoBehaviour {
+    [HideInInspector] // Because we have a custom renderer
     public List<MobWave> Waves = new List<MobWave>();
 
     public Vector2 SpawnLocation = Vector2.zero;
