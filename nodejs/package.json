@@ -1,0 +1,35 @@
+{
+  "name": "td-server",
+  "version": "1.0.0",
+  "description": "mp server for TD game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AVWD/ProjectTD.git"
+  },
+  "keywords": [
+    "tower",
+    "defense",
+    "unity",
+    "nodejs",
+    "mp",
+    "games",
+    "gameprog",
+    "2d"
+  ],
+  "author": "Kaladin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AVWD/ProjectTD/issues"
+  },
+  "homepage": "https://github.com/AVWD/ProjectTD#readme",
+  "dependencies": {
+    "cron": "^1.2.1",
+    "moment": "^2.18.1",
+    "shortid": "^2.2.8",
+    "underscore": "^1.8.3"
+  }
+}
