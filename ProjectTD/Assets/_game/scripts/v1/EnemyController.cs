@@ -17,7 +17,8 @@ public class EnemyController : MonoBehaviour
         Speed = EnemyData.Speed;
         Armor = EnemyData.Armor;
 
-        Vector3 position = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
+        // Just to check targeting, move to a random pos on the board
+        Vector3 position = new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), 0);
         transform.DOMove(position, 1f, false)
             .SetEase(Ease.Linear);
     }

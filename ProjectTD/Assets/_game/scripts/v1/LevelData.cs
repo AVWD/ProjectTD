@@ -22,7 +22,7 @@ public class LevelData : MonoBehaviour {
 	void Update () {
         eTime += Time.deltaTime;
 
-        if(eTime >= WaveTimer)
+        if(eTime >= WaveTimer && CurrentWave < Waves.Count)
         {
             MobWave wave = Waves[CurrentWave];
 

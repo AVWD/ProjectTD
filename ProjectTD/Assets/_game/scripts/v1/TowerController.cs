@@ -34,6 +34,8 @@ public class TowerController : MonoBehaviour
                 // Attempting sqr distance for performance
                 float distance = Vector3.SqrMagnitude(inRange[i].transform.position - transform.position);
                 //float distance = Vector3.Distance(target.transform.position, transform.position);
+                
+                // Prune if out of range
                 if (distance > TowerData.Range * TowerData.Range)
                 {
                     inRange.RemoveAt(i);
@@ -113,12 +115,14 @@ public class TowerController : MonoBehaviour
                 // Move to fire coroutine
                 GameObject bullet = Instantiate(TowerData.ProjectileData.Projectile, this.transform);
                 bullet.transform.position = this.transform.position;
+                
                 Tweener t = bullet.transform.DOMove(currentTarget.transform.position, TowerData.ProjectileData.TravelTime, false)
                     .SetEase(TowerData.ProjectileData.EaseType)
+                    .SetAutoKill(false)
                     .OnComplete(() =>
                     {
                         // Remove instance - Is the scope correct?
-                        //t = null;
+                        t = null;
                         bullet.active = false;
                         GameObject.Destroy(bullet);
 
